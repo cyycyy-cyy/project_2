@@ -1,0 +1,488 @@
+/* 声明字体图标 这里要注意路径变化*/
+
+@font-face {
+    /* 把下面第一句复制到谁需要的地方 */
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.eot?6wmmiw');
+    src: url('../fonts/icomoon.eot?6wmmiw#iefix') format('embedded-opentype'), url('../fonts/icomoon.ttf?6wmmiw') format('truetype'), url('../fonts/icomoon.woff?6wmmiw') format('woff'), url('../fonts/icomoon.svg?6wmmiw#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+.main {
+    width: 980px;
+    height: 455px;
+    margin-left: 220px;
+    margin-top: 10px;
+}
+
+.focus {
+    position: relative;
+    float: left;
+    width: 721px;
+    height: 455px;
+    overflow: hidden;
+}
+
+
+/* 轮播图效果：1.ul包含几个li，li里放img，ul足够宽，li左浮动一行显示 
+2.ul做动画
+3.滚动图片的算法：点击某个小圆圈，就让图片滚动[小圆圈的索引号*图片的宽度]作为ul的滚动距离*/
+
+.focus ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 600%;
+}
+
+.focus ul li {
+    float: left;
+}
+
+.focus ul li img {
+    width: 721px;
+    height: 455px;
+}
+
+.focus .prew,
+.focus .next {
+    display: none;
+    position: absolute;
+    /* 绝对定位走到Y轴中间的算法：走一半，1.再往回走高的一半 */
+    top: 50%;
+    margin-top: -15px;
+    /* margin-top: -15px   =   transform: translateY(-50%);   2.平移不用自己计算*/
+    /* transform: translate对于行内元素是无效的 */
+    /* 走到整个盒子的中间
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%); */
+    width: 20px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, .3);
+    text-align: center;
+    line-height: 30px;
+    font-size: 14px;
+    color: #fff;
+    text-decoration: none;
+    /* ul有定位，左右箭头a也有定位，添加一个层级 */
+    z-index: 2;
+}
+
+.focus .prew {
+    left: 0;
+    /* 设置右上角和右下角的圆角边框 */
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.focus .next {
+    right: 0;
+    /* 设置左上角和左下角的圆角边框 */
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.focus .cricle {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    width: 70px;
+    height: 13px;
+    margin-left: -35px;
+    background: rgba(255, 255, 255, .3);
+    border-radius: 7px;
+}
+
+.cricle li {
+    float: left;
+    width: 8px;
+    height: 8px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin: 3px;
+}
+
+.cricle .current {
+    background-color: #c81623;
+}
+
+.main .newsflash {
+    float: right;
+    width: 250px;
+    height: 455px;
+}
+
+.news {
+    height: 165px;
+    border: 1px solid #e4e4e4;
+}
+
+.news-hd {
+    height: 33px;
+    line-height: 33px;
+    border-bottom: 1px dotted #e4e4e4;
+    padding: 0 15px;
+}
+
+.news-hd h5 {
+    float: left;
+    font-size: 14px;
+}
+
+.news-hd .more {
+    float: right;
+}
+
+.news-hd .more::after {
+    content: '';
+    font-family: 'icomoon';
+}
+
+.news-bd {
+    padding: 5px 15px 0;
+}
+
+.news-bd ul li {
+    height: 24px;
+    line-height: 24px;
+    /* 单行文字溢出显示省略号...   1.溢出隐藏 2.强制一行显示 3.显示省略号*/
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.lifeservice {
+    /* 2.因为li设了右边框，让父盒子足够大就可以装，溢出隐藏 */
+    overflow: hidden;
+    height: 209px;
+    /* 1.田字格做法：ul设置左右下边框，li设置右下边框 */
+    border: 1px solid #e4e4e4;
+    border-top: 0;
+}
+
+.lifeservice ul {
+    width: 252px;
+}
+
+.lifeservice ul li {
+    float: left;
+    width: 63px;
+    height: 71px;
+    border-right: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+    text-align: center;
+}
+
+.lifeservice ul li i {
+    display: inline-block;
+    width: 24px;
+    height: 28px;
+    margin-top: 12px;
+}
+
+.lifeservice ul li:nth-of-type(1) i:nth-of-type(1) {
+    background: url(../images/icons.png) no-repeat -19px -15px;
+}
+
+.lifeservice ul li:nth-of-type(2) i:nth-of-type(1) {
+    background: url(../images/icons.png) no-repeat -80px -15px;
+}
+
+.lifeservice ul li:nth-of-type(3) i:nth-of-type(1) {
+    background: url(../images/icons.png) no-repeat -142px -15px;
+}
+
+.lifeservice ul li:nth-of-type(4) i:nth-of-type(1) {
+    background: url(../images/icons.png) no-repeat -205px -15px;
+}
+
+.lifeservice ul li:nth-of-type(5) i:nth-of-type(1) {
+    background: url(../images/icons.png) no-repeat -17px -83px;
+}
+
+.lifeservice ul li:nth-of-type(6) i:nth-of-type(1) {
+    background: url(../images/icons.png) no-repeat -80px -83px;
+}
+
+.lifeservice ul li:nth-of-type(7) i:nth-of-type(1) {
+    background: url(../images/icons.png) no-repeat -142px -83px;
+}
+
+.lifeservice ul li:nth-of-type(8) i:nth-of-type(1) {
+    background: url(../images/icons.png) no-repeat -205px -83px;
+}
+
+.lifeservice ul li:nth-of-type(9) i:nth-of-type(1) {
+    background: url(../images/icons.png) no-repeat -17px -159px;
+}
+
+.lifeservice ul li:nth-of-type(10) i:nth-of-type(1) {
+    background: url(../images/icons.png) no-repeat -79px -159px;
+}
+
+.lifeservice ul li:nth-of-type(11) i:nth-of-type(1) {
+    background: url(../images/icons.png) no-repeat -142px -154px;
+}
+
+.lifeservice ul li:nth-of-type(12) i:nth-of-type(1) {
+    background: url(../images/icons.png) no-repeat -205px -156px;
+}
+
+.bargain {
+    margin-top: 5px;
+}
+
+
+/* 推荐模块 */
+
+.recom {
+    height: 163px;
+    background-color: #ebebeb;
+    margin-top: 12px;
+}
+
+.recom_hd {
+    float: left;
+    height: 163px;
+    width: 205px;
+    background-color: #5c5251;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.recom_bd {
+    float: left;
+}
+
+.recom_bd ul li {
+    float: left;
+    position: relative;
+}
+
+.recom_bd ul li img {
+    width: 248px;
+    height: 163px;
+}
+
+.recom_bd ul li:nth-child(-n+3)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 10px;
+    width: 1px;
+    height: 145px;
+    background-color: #ddd;
+}
+
+
+/* 猜你喜欢模块 */
+
+.love {
+    height: 300px;
+}
+
+.like {
+    height: 33px;
+    line-height: 33px;
+    margin-top: 12px;
+}
+
+.like h5 {
+    float: left;
+    font-size: 14px;
+}
+
+.like a {
+    float: right;
+    padding-right: 15px;
+}
+
+.like a::after {
+    content: '';
+    font-family: 'icomoon';
+}
+
+.commodity ul li {
+    /* 3.溢出裁剪 */
+    overflow: hidden;
+    float: left;
+    width: 200px;
+    height: 267px;
+    border: 1px solid #e4e4e4;
+}
+
+.tupianbox {
+    width: 200px;
+    height: 180px;
+    /* 3.溢出裁剪 */
+    overflow: hidden;
+}
+
+.commodity ul li img {
+    width: 200px;
+    height: 180px;
+    /* 2.过渡效果 */
+    transition: all 0.4s;
+}
+
+.commodity ul li img:hover {
+    /* 1.放大效果。放大1.1倍，默认以中心向四周放大，可用transform-origin:方位名词;设置中心点
+       不影响其他盒子位置 */
+    transform: scale(1.1);
+}
+
+.commodity ul li h4 {
+    padding: 10px 20px;
+}
+
+.commodity ul li .money p {
+    float: left;
+    padding-left: 20px;
+    padding-right: 10px;
+    font-size: 18px;
+    color: red;
+}
+
+.commodity ul li .money span:nth-of-type(1) {
+    float: left;
+    margin-top: 6px;
+    font-size: 12px;
+    text-decoration: line-through;
+}
+
+.commodity ul li .money span:nth-of-type(2) {
+    float: right;
+    margin-right: 5px;
+    margin-top: 6px;
+    font-size: 12px;
+}
+
+
+/* 家用电器模块 */
+
+.box_hd {
+    height: 30px;
+    border-bottom: 2px solid #c81623;
+}
+
+.box_hd h3 {
+    float: left;
+    font-size: 18px;
+    color: #c81623;
+    font-weight: 400;
+}
+
+.tab_list {
+    float: right;
+    line-height: 30px;
+}
+
+.tab_list ul li {
+    float: left;
+}
+
+.tab_list ul li a {
+    margin: 0 15px;
+}
+
+.floor .w {
+    margin-top: 30px;
+}
+
+.box_bd {
+    height: 361px;
+}
+
+.tab_list_item {
+    display: none;
+}
+
+.tab_list_item>div {
+    float: left;
+    height: 361px;
+}
+
+.col_210 {
+    width: 210px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.col_210 ul {
+    padding-left: 12px;
+}
+
+.col_210 ul li {
+    float: left;
+    width: 85px;
+    height: 34px;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    line-height: 34px;
+    margin-right: 10px;
+}
+
+.col_329 {
+    width: 329px;
+}
+
+.col_221 {
+    width: 221px;
+    border-right: 1px solid #ccc;
+}
+
+.col_221 {
+    width: 221px;
+}
+
+.col_219 {
+    width: 219px;
+}
+
+.bb {
+    /* 一般情况下，a如果包含在有宽度的盒子，a需要转化为块级元素 */
+    display: block;
+    border-bottom: 1px solid #ccc;
+}
+
+.slider-bar {
+    position: absolute;
+    top: 300px;
+    left: 50%;
+    margin-left: 600px;
+    width: 70px;
+    height: 96px;
+    font-size: 14px;
+}
+
+.slider-bar ul {
+    border-top: 1px solid #e4e4e4;
+}
+
+.slider-bar ul li {
+    float: left;
+    padding: 5px;
+    width: 100%;
+    border-right: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+    background-color: #f1f1f1;
+    text-align: center;
+}
+
+.goback {
+    display: none;
+    height: 32px;
+    border-right: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+.slider-bar ul .current {
+    background-color: #c81623;
+}
+
+.slider-bar ul .current a {
+    color: #fff;
+}

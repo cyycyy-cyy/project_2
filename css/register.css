@@ -1,0 +1,165 @@
+.w {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    height: 84px;
+    line-height: 84px;
+    border-bottom: 2px solid #c81523;
+}
+
+.register {
+    height: 522px;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+}
+
+.register h3 {
+    height: 42px;
+    border-bottom: 1px solid #ccc;
+    padding-left: 10px;
+    background-color: #ececec;
+    line-height: 42px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.login {
+    float: right;
+    padding-right: 10px;
+    font-size: 14px;
+}
+
+.login a {
+    color: #c81623;
+    margin-left: 2px;
+}
+
+.reg_form {
+    width: 600px;
+    margin: 50px auto 0;
+}
+
+.reg_form ul li {
+    margin-bottom: 20px;
+}
+
+.reg_form ul li label {
+    display: inline-block;
+    width: 88px;
+    text-align: right;
+}
+
+.reg_form ul li .inp,
+.reg_form ul li .ipt {
+    width: 242px;
+    height: 37px;
+    border: 1px solid #ccc;
+}
+
+.reg_form ul li button {
+    display: inline-block;
+    width: 80px;
+    height: 37px;
+}
+
+.message {
+    display: inline-block;
+    font-size: 12px;
+    color: #999;
+    padding-left: 20px;
+}
+
+.error {
+    color: #c81523;
+}
+
+.wrong {
+    color: #c81523;
+    background: url(../images/error.png) no-repeat left center;
+}
+
+.error_icon,
+.success_icon {
+    display: inline-block;
+    /* 设置图片与文字垂直居中（一行平行） */
+    vertical-align: middle;
+    margin: -2px 5px 0;
+    width: 20px;
+    height: 20px;
+    background: url(../images/error.png) no-repeat;
+}
+
+.success {
+    color: green;
+}
+
+.right {
+    color: green;
+    background: url(../images/success.png) no-repeat left center;
+}
+
+.success_icon {
+    background: url(../images/success.png) no-repeat;
+}
+
+.safe {
+    padding-left: 165px;
+}
+
+.safe em {
+    margin: 0 2px;
+    padding: 0 12px;
+    color: #fff;
+}
+
+.ruo {
+    background-color: #de1111;
+}
+
+.zhong {
+    background-color: #40b83f;
+}
+
+.qiang {
+    background-color: #f79100;
+}
+
+.agree {
+    padding-left: 95px;
+}
+
+.agree input {
+    vertical-align: middle;
+}
+
+.agree a {
+    color: #1ba1e6;
+}
+
+.btn {
+    width: 200px;
+    height: 34px;
+    background-color: #c81623;
+    font-size: 14px;
+    color: #fff;
+    margin: 30px 0 0 70px;
+}
+
+.mod_copyright {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.mod_copyright .links {
+    margin-bottom: 15px;
+}
+
+.links a {
+    margin: 0 15px;
+}
+
+.mod_copyright .copyright {
+    line-height: 20px;
+}

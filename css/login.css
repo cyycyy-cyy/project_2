@@ -1,0 +1,115 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+input {
+    /* 取消表单input轮廓 */
+    outline: none;
+}
+
+.login-header {
+    height: 100px;
+    text-align: center;
+    margin: 0 auto;
+    line-height: 100px;
+    font-size: 20px;
+}
+
+.login {
+    /* 隐藏 */
+    display: none;
+    position: fixed;
+    width: 512px;
+    height: 280px;
+    border: #ebebeb solid 1px;
+    background: #ffffff;
+    box-shadow: 0 0 20px #ddd;
+    z-index: 999;
+    /* 固定定位水平居中垂直居中 */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+}
+
+.login-title {
+    position: relative;
+    width: 100%;
+    margin: 10px 0px 0px 0px;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    /* 鼠标放上去移动十字形箭头 */
+    cursor: move;
+}
+
+.login-input-content {
+    margin-top: 20px;
+}
+
+.login-button {
+    width: 50%;
+    margin: 30px auto 0px auto;
+    line-height: 40px;
+    font-size: 14px;
+    border: #ebebeb 1px solid;
+    text-align: center;
+}
+
+.login-bg {
+    /* 隐藏 */
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.login-button a {
+    display: block;
+}
+
+.login-input input.list-input {
+    float: left;
+    line-height: 35px;
+    height: 35px;
+    width: 350px;
+    border: #ebebeb 1px solid;
+    text-indent: 5px;
+}
+
+.login-input {
+    overflow: hidden;
+    margin: 0px 20px 0px;
+}
+
+.login-input label {
+    float: left;
+    width: 90px;
+    padding-right: 10px;
+    text-align: right;
+    line-height: 35px;
+    height: 35px;
+    font-size: 14px;
+}
+
+.login-title span {
+    position: absolute;
+    font-size: 12px;
+    right: -20px;
+    top: -30px;
+    background: #ffffff;
+    border: #ebebeb solid 1px;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+}

@@ -1,0 +1,130 @@
+.nav {
+    overflow: hidden;
+}
+
+.sk {
+    position: absolute;
+    border-left: 1px solid #c81523;
+    margin-left: 190px;
+    margin-top: 40px;
+    padding: 3px 0 0 14px;
+}
+
+.sk_list {
+    float: left;
+}
+
+.sk_list ul li {
+    float: left;
+}
+
+.sk_list ul li a {
+    display: block;
+    line-height: 47px;
+    padding: 0 30px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+}
+
+.sk_com {
+    float: left;
+}
+
+.sk_com ul li {
+    float: left;
+}
+
+.sk_com ul li a {
+    display: block;
+    line-height: 49px;
+    padding: 0 20px;
+    font-size: 14px;
+}
+
+.sk_com ul li:last-child a::after {
+    content: '';
+    font-family: 'icomoon';
+}
+
+.sk_bd ul {
+    overflow: hidden;
+}
+
+
+/* 1.过渡 */
+
+.sk_bd ul li img {
+    transition: all 2s ease;
+}
+
+.sk_bd ul li {
+    overflow: hidden;
+    float: left;
+    margin-right: 13px;
+    width: 290px;
+    height: 470px;
+    /* 鼠标一经过加边框效果会撑大盒子会抖，所以原来就设透明边框，经过再变颜色 */
+    border: 1px solid transparent;
+}
+
+.sk_bd ul li:nth-child(4n) {
+    margin-right: 0;
+}
+
+.sk_bd ul li:hover {
+    border: 1px solid #c81523;
+    /* 2.Y轴变化，向上平移。不影响其他盒子 */
+    transform: translateY(-5px);
+}
+
+.sk_bd h4 {
+    font-size: 14px;
+    padding: 10px;
+}
+
+.sk_bd ul li p {
+    padding-left: 10px;
+    display: inline-block;
+    font-size: 25px;
+    color: #c81523;
+}
+
+.sk_bd ul li span {
+    font-style: italic;
+    margin-left: 10px;
+    text-decoration: line-through;
+}
+
+.sk_ys {
+    margin-top: 5px;
+    padding-left: 10px;
+}
+
+.sk_jindutiao1 {
+    margin: 0 10px;
+    display: inline-block;
+    width: 140px;
+    height: 14px;
+    /* vertical-align: top; */
+    border-radius: 7px;
+    /* padding: 1px; */
+    border: 1px solid red;
+}
+
+.sk_jindutiao2 {
+    width: 70%;
+    height: 100%;
+    background-color: red;
+}
+
+.sk_qg {
+    width: 290px;
+    height: 50px;
+    margin-top: 5px;
+    background-color: rgb(194, 56, 56);
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    font-size: 18px;
+}

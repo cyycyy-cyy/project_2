@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CH">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录页面</title>
+    <!-- 把.ico图片放在网站根目录，把左上角标题图标引入html -->
+    <link rel="shortcut icon" href="favicon.ico" />
+    <!-- 引入首页专有的样式文件 -->
+    <link rel="stylesheet" href="css/login.css">
+    <!-- 引入js文件 -->
+    <script type="text/javascript" src="./js/login.js "></script>
+</head>
+
+<body>
+    <div class="login-header"><a class="link" href="javascript:;">点击弹出登录框</a></div>
+    <div class="login">
+        <div id="title" class="login-title">登录会员
+            <span><a id="closeBtn" href="javascript:void(0);" class="close-login">关闭</a></span>
+        </div>
+        <div class="login-input-content">
+            <div class="login-input">
+                <label for="">用户名：</label>
+                <input type="text" placeholder="请输入用户名" name="info[username]" id="username" class="list-input">
+            </div>
+            <div class="login-input">
+                <label for="">登录密码：</label>
+                <input type="password" placeholder="请输入登录密码" name="info[password]" id="password" class="list-input">
+            </div>
+        </div>
+        <div id="loginBtn" class="login-button">
+            <a href="javascript:void(0);" id="login-button-submit">登录</a>
+        </div>
+    </div>
+    <!-- 遮盖层 -->
+    <div id="bd" class="login-bg"></div>
+</body>
+
+</html>
